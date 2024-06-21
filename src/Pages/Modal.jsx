@@ -5,7 +5,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 const Modal = ({ onclose }) => {
   return (
     <>
-      <div className='fixed inset-0 bg-black bg-opacity-30 backdrop:blur-md flex justify-center items-center'>
+      <div className='fixed inset-0 bg-black bg-opacity-30 backdrop:blur-md flex justify-center items-center z-30'>
         <div className=' flex flex-col gap-5 text-white'>
           <button onClick={onclose} className='place-self-end'><FontAwesomeIcon icon={faXmark} size={40} /></button>
 

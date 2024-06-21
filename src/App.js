@@ -8,12 +8,17 @@ import Login from './Pages/Login';
 import Products from './Components/Products'
 import AboutUs from './Pages/AboutUs';
 import Contact from './Pages/Contact';
-// import Checkout from './Components/Checkout';
+import Checkout from './Components/Checkout';
+import { Provider, useSelector } from 'react-redux';
+import { store } from './Components/State/Store';
 // import Card from './Components/Card';
 // import Demo from './Components/Demo';
 // import ProductPage from './Components/ProductPage';
+import Offer from './Components/Offer';
 
 function App() {
+  const isOpen = useSelector((state) => state.checkout);
+  console.log(isOpen);
 
   return (
     <div className="App">
@@ -27,11 +32,13 @@ function App() {
         <Route path='/Login' element={<Login />}></Route>
         <Route path='/Products' element={<Products />}></Route>
       </Routes>
-      {/* <Checkout /> */}
+      {isOpen && <Checkout />}
+      {/* <Offer/> */}
       {/* <Demo /> */}
-      {/* <ProductPage/> */}
+      {/* <ProductPage /> */}
       {/* <Card /> */}
       <Footer />
+
     </div>
   );
 }

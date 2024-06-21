@@ -2,11 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { FaRegUser } from "react-icons/fa";
 import { IoBagOutline } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
+import { open } from './State/Slice/CheckOutSlice';
 import logo from '../Images/logo.png';
 import { Link } from 'react-router-dom';
 import Modal from '../Pages/Modal';
+import { useDispatch, useSelector } from 'react-redux';
+import { store } from './State/Store';
 
 const Navbar = () => {
+    const dispatch = useDispatch();
+    // const amount = useSelector((state => state.cart))
+    const open = useSelector(store => store.checkout);
     const [showModal, setshowModal] = useState(false);
 
     const [scroll, setScroll] = useState(false);
@@ -19,15 +25,15 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className='main'>
-                <div className='container'>
+            <div className='main '>
+                <div className='container '>
                     <div class="header__bar bg-black text-white">
                         <marquee scrollamount="10">
                             <pre>AVAIL 15% OFF ON ALL ORDERS ABOVE ₹3500                                                    AVAIL 15% OFF ON ALL ORDERS ABOVE ₹3500                                                      AVAIL 15% OFF ON ALL ORDERS ABOVE ₹3500  </pre>
                         </marquee>
                     </div>
-                    <div class="top-0 py-1  sticky  lg:py-2 w-full  lg:relative ">
-                        <nav class={`${scroll ? "fixed bg-white w-full  rounded-full  top-5 left-0 right-0 " : ""}z-10 top-0  left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto px-5 py-2.5 lg:border-none lg:py-4`}>
+                    <div class="top-0 py-1 z-50  sticky  lg:py-2 w-full  lg:relative ">
+                        <nav class={`${scroll ? "fixed bg-white w-full  rounded-full  top-5 left-0 right-0 " : ""}z-50 top-0  left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto px-5 py-2.5 lg:border-none lg:py-4`}>
                             <div class="flex  items-center justify-between">
                                 <button>
                                     <div class="flex items-center space-x-2">
@@ -62,7 +68,7 @@ const Navbar = () => {
 
                                     <button class="flex items-center text-black  justify-center px-2 py-2 font-semibold" ><Link to='./Login'><FaRegUser className='text-xl' /></Link></button>
 
-                                    <div className=' relative cursor-pointer' >
+                                    <div className=' relative cursor-pointer' onClick={() => dispatch(open())} >
                                         <IoBagOutline className='text-2xl' />
 
                                         <div className=' absolute w-3 h-3 rounded-full z-10 right-[-3px] bottom-[-3px] flex items-center justify-center text-[10px] bg-black text-white'>0</div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Trending from './Trending';
-// import Products from './Products';
+import Products from './Products';
 
 const BestSeller = () => {
     const [isToggle, setIsToggle] = useState(false);

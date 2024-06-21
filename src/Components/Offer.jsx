@@ -1,6 +1,11 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Add } from './State/Slice/countSlice'
 
 const Offer = () => {
+    const dispatch = useDispatch()
+    const count = useSelector((store) => store.count)
+    console.log(count);
     return (
         <div>
             <section className="overflow-hidden rounded-lg shadow-2xl md:grid md:grid-cols-3">
@@ -14,7 +19,7 @@ const Offer = () => {
                     <p className="text-sm font-semibold uppercase tracking-widest">Run with the pack</p>
 
                     <h2 className="mt-6 font-black uppercase">
-                        <span className="text-4xl font-black sm:text-5xl lg:text-6xl"> Get 20% off </span>
+                        <span className="text-4xl font-black sm:text-5xl lg:text-6xl"> {count}Get 20% off </span>
 
                         <span className="mt-2 block text-sm">On your next order over $50</span>
                     </h2>
@@ -22,6 +27,7 @@ const Offer = () => {
                     <a
                         className="mt-8 inline-block w-full bg-black py-4 text-sm font-bold uppercase tracking-widest text-white"
                         href="#"
+                        onClick={() => dispatch(Add())}
                     >
                         Get Discount
                     </a>
