@@ -17,12 +17,13 @@ import { store } from './Components/State/Store';
 import Offer from './Components/Offer';
 
 function App() {
-  const isOpen = useSelector((state) => state.checkout);
+  const isOpen = useSelector((state) => state.toggle);
   console.log(isOpen);
 
   return (
     <div className="App">
       <Navbar />
+      <Checkout />
       <Routes>
         <Route path='/' element={<Hero />}></Route>
         <Route path='/Home' element={<Hero />}></Route>

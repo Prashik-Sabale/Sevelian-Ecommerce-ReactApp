@@ -1,11 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { add } from './State/Slice/CartSlice';
 
 
 
 const Shoppingitems = ({ item }) => {
     const dispatch = useDispatch();
     const { id, dec, name, image, price } = item
+
+
     return (
         <div>
             <div className=' cursor-pointer h-[300px] flex items-center justify-center '>
@@ -20,7 +23,7 @@ const Shoppingitems = ({ item }) => {
                     <div className='text-sm font-bold mb-3'>{name}</div>
                     <div className='text-xl font-bold'>₹{price}</div>
                 </div>
-                <button className=' bg-black p-3  text-white' onClick={() => dispatch((item))}>Add to Bag</button>
+                <button className=' bg-black p-3  text-white' onClick={() => dispatch(add(item))}>Add to Bag</button>
             </div>
         </div>
     )

@@ -5,7 +5,7 @@ import { createSlice } from '@reduxjs/toolkit';
 // };
 
 const CheckOutSlice = createSlice({
-    name: "checkout",
+    name: "toggle",
     initialState: false,
     reducers: {
         open: (state) => {

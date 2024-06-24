@@ -11,8 +11,11 @@ import { store } from './State/Store';
 
 const Navbar = () => {
     const dispatch = useDispatch();
+    const cartItem = useSelector((store) => store.cart)
+    console.log(cartItem.cart);
     // const amount = useSelector((state => state.cart))
-    const open = useSelector(store => store.checkout);
+    const toggle = useSelector(store => store.toggle);
+    console.log(toggle)
     const [showModal, setshowModal] = useState(false);
 
     const [scroll, setScroll] = useState(false);
@@ -25,7 +28,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className='main '>
+            <div className='main w-full  '>
                 <div className='container '>
                     <div class="header__bar bg-black text-white">
                         <marquee scrollamount="10">
@@ -68,10 +71,10 @@ const Navbar = () => {
 
                                     <button class="flex items-center text-black  justify-center px-2 py-2 font-semibold" ><Link to='./Login'><FaRegUser className='text-xl' /></Link></button>
 
-                                    <div className=' relative cursor-pointer' onClick={() => dispatch(open())} >
-                                        <IoBagOutline className='text-2xl' />
+                                    <div className=' relative cursor-pointer'  >
+                                        <IoBagOutline className='text-2xl' onClick={() => dispatch(open())} />
 
-                                        <div className=' absolute w-3 h-3 rounded-full z-10 right-[-3px] bottom-[-3px] flex items-center justify-center text-[10px] bg-black text-white'>0</div>
+                                        <div className=' absolute w-3 h-3 rounded-full z-10 right-[-3px] bottom-[-3px] flex items-center justify-center text-[10px] bg-black text-white'>{cartItem.cart.length}</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-center lg:hidden">

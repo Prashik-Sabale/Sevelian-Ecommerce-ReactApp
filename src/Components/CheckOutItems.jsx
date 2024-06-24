@@ -1,9 +1,13 @@
 import React from 'react'
 
-const CheckOutItems = () => {
+const CheckOutItems = ({ cartItem }) => {
+  const { name, price, image } = cartItem
+  console.log(cartItem);
   return (
     <div>
-      <h1>CheckOutitems</h1>
+      <h1>{name}</h1>
+      <h1>{price}</h1>
+      <img src={image} height={50} width={50} alt="" />
     </div>
   )
 }
