@@ -12,7 +12,7 @@ const Shoppingitems = ({ item }) => {
     return (
         <div>
             <div className=' cursor-pointer h-[300px] flex items-center justify-center '>
-                <div class="relative ">
+                <div className="relative ">
                     <img src={image} alt="" className='w-[200px]' />
                     {/* <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-small">Best Seller</div> */}
                 </div>

@@ -14,7 +14,8 @@ import { store } from './Components/State/Store';
 // import Card from './Components/Card';
 // import Demo from './Components/Demo';
 // import ProductPage from './Components/ProductPage';
-import Offer from './Components/Offer';
+// import Offer from './Components/Offer';
+// import Navbar2 from './Components/Navbar2';
 
 function App() {
   const isOpen = useSelector((state) => state.toggle);
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      {/* <Navbar2 /> */}
       <Checkout />
       <Routes>
         <Route path='/' element={<Hero />}></Route>

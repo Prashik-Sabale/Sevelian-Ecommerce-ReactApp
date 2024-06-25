@@ -6,16 +6,17 @@ import CheckOutItems from './CheckOutItems';
 
 const Checkout = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart)
+  const { cart, totalPrice, totalQuantity } = useSelector((state) => state.cart);
+  console.log(cart);
   const toggle = useSelector(store => store.toggle);
   console.log(toggle);
   return (
     <>
       {
         toggle ?
-          <div className=' bg-transparentBlack fixed z-50 top-0 left-0 w-full h-screen'>
-            <div className=" h-full bg-white  sm:w-[40rem] min-[15rem] overflow-y-auto:">
-              <div className="p-6">
+          <div className=' bg-transparentBlack fixed z-50 top-0 left-0 w-full h-screen '>
+            <div className=" h-full bg-white sm:w-[40rem] min-[15rem] overflow-y-auto: ">
+              <div className="p-6 ">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center cursor-pointer" onClick={() => dispatch(open())}>
                     <HiChevronLeft />
@@ -24,14 +25,17 @@ const Checkout = () => {
                   <div>Shooping Bag(0)</div>
                 </div>
                 <div className="mt-8">
-                  {cartItems.length === 0 ? (
+                  {cart.length === 0 ? (
                     <div className="uppercase text-center text-3xl"> Your cart is empty</div>
                   ) : (
                     <>
-                      {cartItems.cart.map(cartItem => {
+                      {cart.map(cartItem => {
                         return (
-                          <CheckOutItems key={cartItem.id}
+                          <CheckOutItems
+                            key={cartItem.id}
                             cartItem={cartItem}
+                            totalPrice={totalPrice}
+                            totalQuantity={totalQuantity}
                           />
                         )
                       })}
