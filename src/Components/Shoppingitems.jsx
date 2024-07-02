@@ -14,7 +14,6 @@ const Shoppingitems = ({ item }) => {
             <div className=' cursor-pointer h-[300px] flex items-center justify-center '>
                 <div className="relative ">
                     <img src={image} alt="" className='w-[200px]' />
-                    {/* <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-small">Best Seller</div> */}
                 </div>
             </div>
             <div className="mt-6 flex justify-between  items-center px-4 " >
