@@ -15,84 +15,84 @@ import item12 from './Images/Items/item12.jpg';
 export const items = [
     {
         id: 1,
-        name: "Product1",
+        name: "Oversized Tee - Gray",
         image: item1,
         price: 799,
         quantity: 0
     },
     {
         id: 2,
-        name: "Product2",
+        name: "Oversized Tee - OFFWhite",
         image: item2,
         price: 799,
         quantity: 0
     },
     {
         id: 3,
-        name: "Product3",
+        name: "Oversized Tee - DarkCoffe",
         image: item3,
         price: 799,
         quantity: 0
     },
     {
         id: 4,
-        name: "Product4",
+        name: "Oversized Tee - OffBrown",
         image: item4,
         price: 799,
         quantity: 0
     },
     {
         id: 5,
-        name: "Product5",
+        name: "Oversized Tee - LightPink",
         image: item5,
         price: 799,
         quantity: 0
     },
     {
         id: 6,
-        name: "Product6",
+        name: "Oversized Tee - Black",
         image: item6,
         price: 799,
         quantity: 0
     },
     {
         id: 7,
-        name: "Product7",
+        name: "Oversized Tee - OffBrown",
         image: item7,
         price: 799,
         quantity: 0
     },
     {
         id: 8,
-        name: "Product8",
+        name: "Oversized Tee - Green",
         image: item8,
         price: 799,
         quantity: 0
     },
     {
         id: 9,
-        name: "Product9",
+        name: "Oversized Tee - Blue",
         image: item9,
         price: 799,
         quantity: 0
     },
     {
         id: 10,
-        name: "Product10",
+        name: "Oversized Tee - AcidWash",
         image: item10,
         price: 799,
         quantity: 0
     },
     {
         id: 11,
-        name: "Product10",
+        name: "Oversized Tee - LightOlive",
         image: item11,
         price: 799,
         quantity: 0
     },
     {
         id: 12,
-        name: "Product10",
+        name: "Oversized Tee - Gray",
         image: item12,
         price: 799,
         quantity: 0

@@ -20,10 +20,10 @@ const Shoppingitems = ({ item }) => {
             <div className="mt-6 flex justify-between  items-center px-4 " >
                 <div  >
                     <div className='text-sm font-bold  text-zinc-600'>{dec}</div>
-                    <div className='text-sm font-bold mb-3'>{name}</div>
+                    <div className='text-sm font-bold text-zinc-800 mb-3'>{name}</div>
                     <div className='text-xl font-bold'>₹{price}</div>
                 </div>
-                <button className=' bg-black p-3  text-white' onClick={() => dispatch(add(item))}>Add to Bag</button>
+                <button className=' bg-black p-3  text-white' onClick={() => dispatch(add(item))}>Add Bag</button>
             </div>
         </div>
     )

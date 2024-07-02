@@ -11,6 +11,8 @@ import Contact from './Pages/Contact';
 import Checkout from './Components/Checkout';
 import { Provider, useSelector } from 'react-redux';
 import { store } from './Components/State/Store';
+import MainNav from './Components/MainNav';
+// import Navbar3 from './Components/Navbar3';
 // import Card from './Components/Card';
 // import Demo from './Components/Demo';
 // import ProductPage from './Components/ProductPage';
@@ -23,7 +25,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <MainNav />
+      {/* <Navbar /> */}
+      {/* <Navbar3 /> */}
       {/* <Navbar2 /> */}
       <Checkout />
       <Routes>
