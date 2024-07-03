@@ -1,17 +1,18 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { Add } from './State/Slice/countSlice'
+// import { useDispatch, useSelector } from 'react-redux';
+import { Add } from './State/Slice/countSlice';
+import cat3 from '../Images/category3.jpg'
 
 const Offer = () => {
-    const dispatch = useDispatch()
-    const count = useSelector((store) => store.count)
-    console.log(count);
+    // const dispatch = useDispatch()
+    // const count = useSelector((store) => store.count)
+    // console.log(count);
     return (
         <div>
             <section className="overflow-hidden rounded-lg shadow-2xl md:grid md:grid-cols-3">
                 <img
                     alt=""
-                    src="https://images.unsplash.com/photo-1611510338559-2f463335092c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
+                    src={cat3}
                     className="h-32 w-full object-cover md:h-full"
                 />
 
@@ -19,21 +20,21 @@ const Offer = () => {
                     <p className="text-sm font-semibold uppercase tracking-widest">Run with the pack</p>
 
                     <h2 className="mt-6 font-black uppercase">
-                        <span className="text-4xl font-black sm:text-5xl lg:text-6xl"> {count}Get 20% off </span>
+                        <span className="text-4xl font-black sm:text-5xl lg:text-6xl">Get 20% off </span>
 
-                        <span className="mt-2 block text-sm">On your next order over $50</span>
+                        <span className="mt-2 block text-sm">On your next order over ₹50</span>
                     </h2>
 
                     <a
                         className="mt-8 inline-block w-full bg-black py-4 text-sm font-bold uppercase tracking-widest text-white"
                         href="#"
-                        onClick={() => dispatch(Add())}
+                    // onClick={() => dispatch(Add())}
                     >
                         Get Discount
                     </a>
 
                     <p className="mt-8 text-xs font-medium uppercase text-gray-400">
-                        Offer valid until 24th March, 2021 *
+                        Offer valid until 24th March, 2024 *
                     </p>
                 </div>
             </section>

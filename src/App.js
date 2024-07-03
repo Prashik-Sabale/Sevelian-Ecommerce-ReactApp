@@ -16,7 +16,6 @@ import MainNav from './Components/MainNav';
 // import Card from './Components/Card';
 // import Demo from './Components/Demo';
 // import ProductPage from './Components/ProductPage';
-// import Offer from './Components/Offer';
 // import Navbar2 from './Components/Navbar2';
 
 function App() {
@@ -40,7 +39,6 @@ function App() {
         <Route path='/Products' element={<Products />}></Route>
       </Routes>
       {isOpen && <Checkout />}
-      {/* <Offer/> */}
       {/* <Demo /> */}
       {/* <ProductPage /> */}
       {/* <Card /> */}

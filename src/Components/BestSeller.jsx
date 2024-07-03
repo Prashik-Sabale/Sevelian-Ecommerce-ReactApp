@@ -6,12 +6,12 @@ const BestSeller = () => {
     const [isToggle, setIsToggle] = useState(false);
 
     return (
-        <div>
+        <div className='p-10'>
             <h1
                 className="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-gray-900 mb-5 md:text-5xl leading-[50px]">
                 The Best Sellers
             </h1>
-            <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9">
+            <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-red-700 mb-9">
                 ALL TIME FAVOURITE
             </p>
             <Trending />

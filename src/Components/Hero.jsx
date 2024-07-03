@@ -5,15 +5,18 @@ import cat2 from '../Images/category2.jpg';
 import BestSeller from './BestSeller';
 import Shoppingitems from './Shoppingitems';
 import { Link } from 'react-router-dom';
+import Offer from './Offer';
 
 const Hero = () => {
     return (
         <div>
             {/* <div className="flex items-center space-x-2">
                 <img src={background} className="w-full  " alt="" />
-
             </div> */}
-            <section className="bg-gray-50">
+
+
+
+            <section className="bg-gray-50" >
                 <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
                     <div className="mx-auto max-w-xl text-center">
                         <div className=' text-gray-700'>UP TO 70% OFF</div>
@@ -39,9 +42,9 @@ const Hero = () => {
                 <div className='container flex justify-center gap-20'>
                     <div><img src={cat1} className="h-30 w-40 rounded-full cursor-pointer" alt="" />Shirts</div>
                     <div><Link to="/Products"><img src={cat2} className="h-30 w-40 rounded-full cursor-pointer" alt="" /></Link>T-Shirts</div>
-
                 </div>
             </div>
+            <Offer />
             <BestSeller />
         </div>
     )
