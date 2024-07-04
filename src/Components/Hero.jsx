@@ -1,11 +1,15 @@
 import React from 'react';
-import background from '../Images/background.jpg';
+// import background from '../Images/background.jpg';
 import cat1 from '../Images/category.jpg';
 import cat2 from '../Images/category2.jpg';
 import BestSeller from './BestSeller';
 import Shoppingitems from './Shoppingitems';
 import { Link } from 'react-router-dom';
 import Offer from './Offer';
+import NewLaunched from './NewLaunched';
+// import hero from '../Images/category.jpg'
+
+
 
 const Hero = () => {
     return (
@@ -16,16 +20,16 @@ const Hero = () => {
 
 
 
-            <section className="bg-gray-50" >
+            <section className="bg-[url(https://cdn.faire.com/fastly/1f86b5a4cf0440587fe48d7f9fb439d6ec65180efa7166d4596407c733578018.jpeg)] bg-cover bg-center bg-no-repeat" >
                 <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
                     <div className="mx-auto max-w-xl text-center">
-                        <div className=' text-gray-700'>UP TO 70% OFF</div>
-                        <h1 className="text-3xl font-extrabold sm:text-5xl">
+                        <div className=' text-white font-extrabold '>UP TO 70% OFF</div>
+                        <h1 className="text-3xl text-black font-extrabold sm:text-5xl">
                             Beyond Minimals
-                            <strong className="font-thin text-red-700 sm:block"> THE VAULT </strong>
+                            <strong className="font-extrabold text-red-700 sm:block"> THE VAULT </strong>
                         </h1>
                         <div className="mt-8 flex flex-wrap justify-center gap-4">
-                            <button type="button" className="block w-full rounded-full bg-black px-12 py-3 text-sm font-medium text-white shadow sm:w-auto">Shop Now</button>
+                            <button type="button" className="block w-full rounded-full bg-white px-12 py-3 text-sm font-medium text-black shadow sm:w-auto">Shop Now</button>
 
                         </div>
                     </div>
@@ -45,9 +49,10 @@ const Hero = () => {
                 </div>
             </div>
             <Offer />
+            <NewLaunched />
             <BestSeller />
         </div>
     )
 }
 
-export default Hero
+export default Hero;

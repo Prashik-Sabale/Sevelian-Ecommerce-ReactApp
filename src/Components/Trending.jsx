@@ -1,8 +1,11 @@
 import React from 'react';
 import Shoppingitems from './Shoppingitems';
-import bestseller1 from '../Images/Items/bestseller1.jpg';
-import bestseller2 from '../Images/Items/bestseller2.jpg';
-import bestseller3 from '../Images/Items/bestseller3.jpg';
+// import bestseller1 from '../Images/Items/bestseller1.jpg';
+// import bestseller2 from '../Images/Items/bestseller2.jpg';
+// import bestseller3 from '../Images/Items/bestseller3.jpg';
+import shirtimg1 from '../Images/Shirts/shirtimg1.jpg';
+import shirtimg2 from '../Images/Shirts/shirtimg2.jpg';
+import shirtimg3 from '../Images/Shirts/shirtimg3.jpg';
 
 
 export const items = [
@@ -10,21 +13,21 @@ export const items = [
         id: 1,
         dec: "Best Seller",
         name: "Oversized Tee - Black",
-        image: bestseller1,
+        image: shirtimg1,
         price: 799,
     },
     {
         id: 2,
         dec: "Best Seller",
         name: "Oversized Tee - CherryRed",
-        image: bestseller2,
+        image: shirtimg2,
         price: 799,
     },
     {
         id: 3,
         dec: "Best Seller",
         name: "Oversized Tee - AcidWash",
-        image: bestseller3,
+        image: shirtimg3,
         price: 799,
     },
 

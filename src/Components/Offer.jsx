@@ -22,7 +22,7 @@ const Offer = () => {
                     <h2 className="mt-6 font-black uppercase">
                         <span className="text-4xl font-black sm:text-5xl lg:text-6xl">Get 20% off </span>
 
-                        <span className="mt-2 block text-sm">On your next order over ₹50</span>
+                        <span className="mt-2 block text-sm">On your First order over ₹50</span>
                     </h2>
 
                     <a

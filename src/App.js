@@ -12,6 +12,8 @@ import Checkout from './Components/Checkout';
 import { Provider, useSelector } from 'react-redux';
 import { store } from './Components/State/Store';
 import MainNav from './Components/MainNav';
+import Newf from './Components/Newf';
+// import Heyy from './Components/Heyy';
 // import Navbar3 from './Components/Navbar3';
 // import Card from './Components/Card';
 // import Demo from './Components/Demo';
@@ -25,6 +27,8 @@ function App() {
   return (
     <div className="App">
       <MainNav />
+      {/* <Heyy /> */}
+      {/* <Newf /> */}
       {/* <Navbar /> */}
       {/* <Navbar3 /> */}
       {/* <Navbar2 /> */}

@@ -21,6 +21,9 @@ const MainNav = () => {
     const [sidebar, setsidebar] = useState(false);
     const showsidebar = () => setsidebar(!sidebar);
 
+    // ***********************************************************************************
+    const [isSideMenuOpen, setMenu] = useState(false);
+    console.log(setMenu);
 
 
     const [scroll, setScroll] = useState(false);
@@ -81,8 +84,8 @@ const MainNav = () => {
                                 <div className=' absolute w-3 h-3 rounded-full z-10 right-[-3px] bottom-[-3px] flex items-center justify-center text-[10px] bg-black text-white'>{cartItem.cart.length}</div>
                             </div>
                         </div>
-                        <div className="flex items-center justify-center lg:hidden" onClick={() => { showsidebar(true) }}>
-                            <GiHamburgerMenu className='w-8 h-5 cursor-pointer' />
+                        <div className="flex items-center justify-center lg:hidden" >
+                            <GiHamburgerMenu className='w-8 h-5 cursor-pointer' onClick={() => setMenu(false)} />
                         </div>
 
                     </div>
