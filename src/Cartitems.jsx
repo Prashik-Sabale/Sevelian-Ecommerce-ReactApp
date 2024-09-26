@@ -15,84 +15,96 @@ import item12 from './Images/Items/item12.jpg';
 export const items = [
     {
         id: 1,
-        name: "Oversized Tee - Gray",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item1,
         price: 799,
         quantity: 0
     },
     {
         id: 2,
-        name: "Oversized Tee - OFFWhite",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item2,
         price: 799,
         quantity: 0
     },
     {
         id: 3,
-        name: "Oversized Tee - DarkCoffe",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item3,
         price: 799,
         quantity: 0
     },
     {
         id: 4,
-        name: "Oversized Tee - OffBrown",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item4,
         price: 799,
         quantity: 0
     },
     {
         id: 5,
-        name: "Oversized Tee - LightPink",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item5,
         price: 799,
         quantity: 0
     },
     {
         id: 6,
-        name: "Oversized Tee - Black",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item6,
         price: 799,
         quantity: 0
     },
     {
         id: 7,
-        name: "Oversized Tee - OffBrown",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item7,
         price: 799,
         quantity: 0
     },
     {
         id: 8,
-        name: "Oversized Tee - Green",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item8,
         price: 799,
         quantity: 0
     },
     {
         id: 9,
-        name: "Oversized Tee - Blue",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item9,
         price: 799,
         quantity: 0
     },
     {
         id: 10,
-        name: "Oversized Tee - AcidWash",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item10,
         price: 799,
         quantity: 0
     },
     {
         id: 11,
-        name: "Oversized Tee - LightOlive",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item11,
         price: 799,
         quantity: 0
     },
     {
         id: 12,
-        name: "Oversized Tee - Gray",
+        dec: "Men's Tshirt",
+        name: "Sevelian Oversized Tee",
         image: item12,
         price: 799,
         quantity: 0

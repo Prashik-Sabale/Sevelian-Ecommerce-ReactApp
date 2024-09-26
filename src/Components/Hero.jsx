@@ -7,6 +7,7 @@ import Shoppingitems from './Shoppingitems';
 import { Link } from 'react-router-dom';
 import Offer from './Offer';
 import NewLaunched from './NewLaunched';
+import ShirtCompo from './ShirtsCompo';
 // import hero from '../Images/category.jpg'
 
 
@@ -29,7 +30,7 @@ const Hero = () => {
                             <strong className="font-extrabold text-red-700 sm:block"> THE VAULT </strong>
                         </h1>
                         <div className="mt-8 flex flex-wrap justify-center gap-4">
-                            <button type="button" className="block w-full rounded-full bg-white px-12 py-3 text-sm font-medium text-black shadow sm:w-auto">Shop Now</button>
+                            <button type="button" className="block w-full rounded-full bg-white px-12 py-3 text-sm font-medium text-black shadow sm:w-auto">Shop Now </button>
 
                         </div>
                     </div>
@@ -44,13 +45,14 @@ const Hero = () => {
                 </span>
 
                 <div className='container flex justify-center gap-20'>
-                    <div><img src={cat1} className="h-30 w-40 rounded-full cursor-pointer" alt="" />Shirts</div>
+                    <div><Link to="/Shirts"><img src={cat1} className="h-30 w-40 rounded-full cursor-pointer" alt="" /></Link>Shirts</div>
                     <div><Link to="/Products"><img src={cat2} className="h-30 w-40 rounded-full cursor-pointer" alt="" /></Link>T-Shirts</div>
                 </div>
             </div>
             <Offer />
             <NewLaunched />
             <BestSeller />
+
         </div>
     )
 }

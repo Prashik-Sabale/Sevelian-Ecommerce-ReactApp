@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Trending from './Trending';
 
 const NewArrivals = () => {
+    const [isToggle, setIsToggle] = useState(false);
     return (
         <div>
             <div className='p-10'>

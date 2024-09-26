@@ -13,10 +13,10 @@ import { Provider, useSelector } from 'react-redux';
 import { store } from './Components/State/Store';
 import MainNav from './Components/MainNav';
 import Newf from './Components/Newf';
+import ShirtCompo from './Components/ShirtsCompo';
+// import ResponsiveMenu from './Components/ResponsiveMenu';
 // import Heyy from './Components/Heyy';
 // import Navbar3 from './Components/Navbar3';
-// import Card from './Components/Card';
-// import Demo from './Components/Demo';
 // import ProductPage from './Components/ProductPage';
 // import Navbar2 from './Components/Navbar2';
 
@@ -41,11 +41,12 @@ function App() {
         <Route path='/Contact-Us' element={<Contact />}></Route>
         <Route path='/Login' element={<Login />}></Route>
         <Route path='/Products' element={<Products />}></Route>
+        <Route path='/Shirts' element={<ShirtCompo />}></Route>
+
       </Routes>
       {isOpen && <Checkout />}
-      {/* <Demo /> */}
       {/* <ProductPage /> */}
-      {/* <Card /> */}
+      {/* <ResponsiveMenu /> */}
       <Footer />
 
     </div>
