@@ -6,8 +6,10 @@ import { open } from './State/Slice/CheckOutSlice';
 import logo from '../Images/logo.png';
 import { Link } from 'react-router-dom';
 import Modal from '../Pages/Modal';
-import { GiHamburgerMenu } from "react-icons/gi";
 import { useDispatch, useSelector } from 'react-redux';
+import { RxCross2 } from "react-icons/rx";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+
 
 
 
@@ -21,9 +23,12 @@ const MainNav = () => {
     const [sidebar, setsidebar] = useState(false);
     const showsidebar = () => setsidebar(!sidebar);
 
-    // ***********************************************************************************
-    const [isSideMenuOpen, setMenu] = useState(false);
-    console.log(setMenu);
+    //Navbar*************************************************
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsOpen(!isOpen);
+    };
 
 
     const [scroll, setScroll] = useState(false);
@@ -84,8 +89,33 @@ const MainNav = () => {
                                 <div className=' absolute w-3 h-3 rounded-full z-10 right-[-3px] bottom-[-3px] flex items-center justify-center text-[10px] bg-black text-white'>{cartItem.cart.length}</div>
                             </div>
                         </div>
-                        <div className="flex items-center justify-center lg:hidden" >
-                            <GiHamburgerMenu className='w-8 h-5 cursor-pointer' onClick={() => setMenu(false)} />
+
+                        {/* Sidebar (for mobile view) */}
+                        <div
+                            className={`fixed top-0 left-0 h-full w-64 z-50 bg-white transform ${isOpen ? "translate-x-0" : "-translate-x-full"
+                                } transition-transform duration-300 ease-in-out md:hidden`}
+                        >
+                            <ul className="flex flex-col items-start mt-16 space-y-6 pl-8">
+
+                                <li>
+                                    <Link to="/Home">Home</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Products">Product</Link>
+                                </li>
+                                <li>
+                                    <Link to="/About-Us">About</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Contact-Us">Contact</Link>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div className="flex items-center justify-center lg:hidden" onClick={toggleSidebar} >
+                            {isOpen ? <RxCross2 size={30} /> : <HiOutlineMenuAlt3 size={30} className='cursor-pointer' />}
+                            {/* <GiHamburgerMenu className='w-8 h-5 cursor-pointer' onClick={() => setMenu(false)} /> */}
                         </div>
 
                     </div>
