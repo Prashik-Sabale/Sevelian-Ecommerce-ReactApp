@@ -7,10 +7,9 @@ import logo from '../Images/logo.png';
 import { Link } from 'react-router-dom';
 import Modal from '../Pages/Modal';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { RxCross2 } from "react-icons/rx";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-
-
 
 
 const MainNav = () => {
@@ -23,12 +22,9 @@ const MainNav = () => {
     const [sidebar, setsidebar] = useState(false);
     const showsidebar = () => setsidebar(!sidebar);
 
-    //Navbar*************************************************
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
-    };
+    // ***********************************************************************************
+    const [isSideMenuOpen, setMenu] = useState(false);
+    console.log(setMenu);
 
 
     const [scroll, setScroll] = useState(false);
@@ -37,6 +33,13 @@ const MainNav = () => {
             setScroll(window.scrollY > 20);
         });
     }, []);
+
+    //Navbar*************************************************
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsOpen(!isOpen);
+    };
 
 
 
@@ -90,13 +93,13 @@ const MainNav = () => {
                             </div>
                         </div>
 
+                        {/* NavLinks Resonsive  */}
                         {/* Sidebar (for mobile view) */}
                         <div
                             className={`fixed top-0 left-0 h-full w-64 z-50 bg-white transform ${isOpen ? "translate-x-0" : "-translate-x-full"
                                 } transition-transform duration-300 ease-in-out md:hidden`}
                         >
                             <ul className="flex flex-col items-start mt-16 space-y-6 pl-8">
-
                                 <li>
                                     <Link to="/Home">Home</Link>
                                 </li>
@@ -112,11 +115,10 @@ const MainNav = () => {
 
                             </ul>
                         </div>
-
-                        <div className="flex items-center justify-center lg:hidden" onClick={toggleSidebar} >
+                        <div className="md:hidden text-black text-2xl cursor-pointer" onClick={toggleSidebar}>
                             {isOpen ? <RxCross2 size={30} /> : <HiOutlineMenuAlt3 size={30} className='cursor-pointer' />}
-                            {/* <GiHamburgerMenu className='w-8 h-5 cursor-pointer' onClick={() => setMenu(false)} /> */}
                         </div>
+
 
                     </div>
                 </nav>
