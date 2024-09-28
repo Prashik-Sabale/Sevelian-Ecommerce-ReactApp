@@ -6,7 +6,6 @@ import Shoppingitems from './Shoppingitems';
 import shirtimg1 from '../Images/Shirts/shirtimg1.jpg';
 import shirtimg2 from '../Images/Shirts/shirtimg2.jpg';
 import shirtimg3 from '../Images/Shirts/shirtimg3.jpg';
-import shirtimg4 from '../Images/Shirts/shirtimg4.jpg';
 
 
 export const items = [
@@ -16,6 +15,7 @@ export const items = [
         name: "Sevelian Shirt",
         image: shirtimg1,
         price: 799,
+        off: "40% off"
     },
     {
         id: 2,
@@ -23,6 +23,7 @@ export const items = [
         name: "Sevelian Shirt",
         image: shirtimg2,
         price: 799,
+        off: "40% off"
     },
     {
         id: 3,
@@ -30,21 +31,16 @@ export const items = [
         name: "Sevelian Shirt",
         image: shirtimg3,
         price: 799,
+        off: "40% off"
     },
-    {
-        id: 4,
-        dec: "Men's shirt",
-        name: "Sevelian Shirt",
-        image: shirtimg4,
-        price: 799,
-    },
+
 
 ]
 
 const Trending = () => {
 
     return (
-        <div className='section grid lg:grid-cols-4 md:grid-cols-2 gap-6 top-0  left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto'>
+        <div className='section grid lg:grid-cols-3 md:grid-cols-2 gap-6 top-0  left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto'>
             {
                 items.map((item) => {
                     return <Shoppingitems key={item.id} item={item} />

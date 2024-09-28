@@ -4,38 +4,35 @@ import { add } from './State/Slice/CartSlice';
 
 
 
+
 const Shoppingitems = ({ item }) => {
     const dispatch = useDispatch();
-    const { id, dec, name, image, price } = item
+    const { id, dec, name, image, price, off } = item
 
 
     return (
         <div>
             <div className=' cursor-pointer h-[300px] flex items-center justify-center  '>
-                {/* Sale  */}
-                {/* <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">SALE
-                    </div> */}
-                <img src={image} alt="" className='w-[200px]' />
+
+                <img class="object-cover w-[200px]" src={image} alt="product image" />
             </div>
-
-
-
-            <div className="mt-6 flex justify-between items-center " >
-                <div>
-                    <div className="text-lg font-bold">{name}</div>
-                    <div className="text-sm text-gray-600">{dec}</div>
-                    <div className="text-sm font-bold mb-2 ">${price}</div>
+            <div class="mt-4 px-5 pb-5">
+                <div className='flex justify-start items-start  '>
+                    <div class="text-xl font-bold text-black">{name}</div>
                 </div>
-                <button className=' bg-black p-2  text-white' onClick={() => dispatch(add(item))}>Add Bag</button>
+                <div className='flex justify-start '>
+                    <div className='text-gray-600'>{dec}</div>
+                </div>
+
+                <div class="mt-2 mb-5 flex items-center justify-between">
+                    <p>
+                        <span class="text-2xl font-bold text-slate-900">₹{price}</span>
+                        <span class="text-sm text-slate-900 line-through px-2">₹699</span>
+                        <span className='text-green-600'>{off}</span>
+                    </p>
+                </div>
+                <button className='flex items-center w-full justify-center rounded-md bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300' onClick={() => dispatch(add(item))}>Add Bag</button>
             </div>
-            {/* <div className="mt-6 flex justify-between items-center px-4">
-                <div>
-                    <div className="text-lg font-bold">{name}</div>
-                    <div className="text-sm text-gray-600">{dec}</div>
-                    <div className="text-sm font-bold mb-2 ">${price}</div>
-                </div>
-                <button className='bg-black text-white p-2 '>Add To Cart</button>
-            </div> */}
         </div>
 
     )

@@ -14,6 +14,7 @@ import { store } from './Components/State/Store';
 import MainNav from './Components/MainNav';
 import Newf from './Components/Newf';
 import ShirtCompo from './Components/ShirtsCompo';
+// import ProductCard from './Components/ProductCard';
 // import ResponsiveMenu from './Components/ResponsiveMenu';
 // import Heyy from './Components/Heyy';
 // import Navbar3 from './Components/Navbar3';
@@ -27,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <MainNav />
+      {/* <ProductCard /> */}
       {/* <Heyy /> */}
       {/* <Newf /> */}
       {/* <Navbar /> */}
@@ -42,7 +44,6 @@ function App() {
         <Route path='/Login' element={<Login />}></Route>
         <Route path='/Products' element={<Products />}></Route>
         <Route path='/Shirts' element={<ShirtCompo />}></Route>
-
       </Routes>
       {isOpen && <Checkout />}
       {/* <ProductPage /> */}

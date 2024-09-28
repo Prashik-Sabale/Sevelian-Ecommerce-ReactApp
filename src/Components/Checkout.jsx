@@ -26,7 +26,8 @@ const Checkout = () => {
                 </div>
                 <div className="mt-8">
                   {cart.length === 0 ? (
-                    <div className="uppercase text-center text-3xl"> Your cart is empty</div>
+                    <div className="uppercase text-center text-3xl"> Your Cart feels lonely.</div>
+
                   ) : (
                     <>
                       {cart.map(cartItem => {

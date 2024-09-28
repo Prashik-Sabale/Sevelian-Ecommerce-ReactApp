@@ -21,7 +21,7 @@ const Hero = () => {
 
 
 
-            <section className="bg-[url(https://cdn.faire.com/fastly/1f86b5a4cf0440587fe48d7f9fb439d6ec65180efa7166d4596407c733578018.jpeg)] bg-cover bg-center bg-no-repeat" >
+            <section className="bg-[url(https://cdn.faire.com/fastly/1f86b5a4cf0440587fe48d7f9fb439d6ec65180efa7166d4596407c733578018.jpeg)] bg-cover  bg-center bg-no-repeat" >
                 <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
                     <div className="mx-auto max-w-xl text-center">
                         <div className=' text-white font-extrabold '>UP TO 70% OFF</div>

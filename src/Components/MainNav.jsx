@@ -51,10 +51,10 @@ const MainNav = () => {
                 </marquee>
             </div>
             <div className="top-0 py-1 lg:py-2 w-full bg-transparent lg:relative z-50">
-                <nav className={`${scroll ? "fixed bg-white w-full  rounded-full  top-5 left-0 right-0 " : ""}z-10 top-0  left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto px-5 py-2.5 lg:border-none lg:py-4`}>
+                <nav className={`${scroll ? "fixed bg-white w-full  rounded-full  top-5 left-0 right-0 " : ""}z-20 top-0  left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto px-5 py-2.5 lg:border-none lg:py-4`}>
                     <div className="flex items-center justify-between">
                         <button>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex items-center space-x-2 ">
                                 <Link to='/Home'><img src={logo} className="w-40" alt="" /></Link>
                             </div>
                         </button>
@@ -99,7 +99,7 @@ const MainNav = () => {
                             className={`fixed top-0 left-0 h-full w-64 z-50 bg-white transform ${isOpen ? "translate-x-0" : "-translate-x-full"
                                 } transition-transform duration-300 ease-in-out md:hidden`}
                         >
-                            <ul className="flex flex-col items-start mt-16 space-y-6 pl-8">
+                            <ul className="flex flex-col items-start mt-24 space-y-6 pl-8">
                                 <li>
                                     <Link to="/Home">Home</Link>
                                 </li>
@@ -112,10 +112,10 @@ const MainNav = () => {
                                 <li>
                                     <Link to="/Contact-Us">Contact</Link>
                                 </li>
-
                             </ul>
                         </div>
-                        <div className="md:hidden text-black text-2xl cursor-pointer" onClick={toggleSidebar}>
+
+                        <div className="md:hidden text-black  text-2xl cursor-pointer" onClick={toggleSidebar}>
                             {isOpen ? <RxCross2 size={30} /> : <HiOutlineMenuAlt3 size={30} className='cursor-pointer' />}
                         </div>
 
