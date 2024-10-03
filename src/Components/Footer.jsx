@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <div>
             <div className="footer">
-                <footer className="bg-white rounded-lg shadow m-4">
+                <footer className="bg-white m-4">
                     <div className="w-full max-w-screen-xl mx-auto md:py-8">
                         <div className="sm:flex sm:items-center sm:justify-between">
                             <Link to="/Home" target='blank' className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">

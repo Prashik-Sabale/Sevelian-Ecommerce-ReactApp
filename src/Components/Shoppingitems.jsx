@@ -14,7 +14,7 @@ const Shoppingitems = ({ item }) => {
         <div>
             <div className=' cursor-pointer rounded-2xl h-[300px] flex items-center justify-center  '>
 
-                <img class="object-cover w-[200px]" src={image} alt="product image" />
+                <img class="object-cover rounded-3xl  w-[200px]" src={image} alt="product image" />
             </div>
             <div class="mt-4 px-5 pb-5">
                 <div className='flex justify-start items-start  '>
