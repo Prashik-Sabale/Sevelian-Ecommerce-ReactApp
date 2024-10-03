@@ -12,7 +12,7 @@ const Shoppingitems = ({ item }) => {
 
     return (
         <div>
-            <div className=' cursor-pointer h-[300px] flex items-center justify-center  '>
+            <div className=' cursor-pointer rounded-2xl h-[300px] flex items-center justify-center  '>
 
                 <img class="object-cover w-[200px]" src={image} alt="product image" />
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import background from '../Images/background.jpg';
 import cat1 from '../Images/category.jpg';
 import cat2 from '../Images/category2.jpg';
@@ -13,13 +13,9 @@ import ShirtCompo from './ShirtsCompo';
 
 
 const Hero = () => {
+    const [isToggled, setIsToggled] = useState(false);
     return (
         <div>
-            {/* <div className="flex items-center space-x-2">
-                <img src={background} className="w-full  " alt="" />
-            </div> */}
-
-
 
             <section className="bg-[url(https://cdn.faire.com/fastly/1f86b5a4cf0440587fe48d7f9fb439d6ec65180efa7166d4596407c733578018.jpeg)] bg-cover  bg-center bg-no-repeat" >
                 <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
@@ -30,7 +26,7 @@ const Hero = () => {
                             <strong className="font-extrabold text-red-700 sm:block"> THE VAULT </strong>
                         </h1>
                         <div className="mt-8 flex flex-wrap justify-center gap-4">
-                            <button type="button" className="block w-full rounded-full bg-white px-12 py-3 text-sm font-medium text-black shadow sm:w-auto">Shop Now </button>
+                            <button onClick={() => { setIsToggled(!isToggled) }} type="button" className="block w-full rounded-full bg-white px-12 py-3 text-sm font-medium text-black shadow sm:w-auto">Shop Now </button>
 
                         </div>
                     </div>
