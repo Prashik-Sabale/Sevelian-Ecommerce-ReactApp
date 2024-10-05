@@ -26,7 +26,7 @@ const Hero = () => {
                             <strong className="font-extrabold text-red-700 sm:block"> THE VAULT </strong>
                         </h1>
                         <div className="mt-8 flex flex-wrap justify-center gap-4">
-                            <button onClick={() => { setIsToggled(!isToggled) }} type="button" className="block w-full rounded-full bg-white px-12 py-3 text-sm font-medium text-black shadow sm:w-auto">Shop Now </button>
+                            <Link onClick={() => { setIsToggled(!isToggled) }} type="button" className="block w-full rounded-full bg-white px-12 py-3 text-sm font-medium text-black shadow sm:w-auto" to="/Shirts">Shop Now </Link>
 
                         </div>
                     </div>
